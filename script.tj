@@ -1,0 +1,16 @@
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche l'envoi du formulaire avant la validation
+
+    // Récupération des valeurs du formulaire
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    // Simple validation
+    if (name && email && message) {
+        alert("Message envoyé avec succès ! Merci pour votre contact.");
+        // Ici tu peux ajouter du code pour envoyer les données au serveur si nécessaire
+    } else {
+        alert("Veuillez remplir tous les champs.");
+    }
+});
